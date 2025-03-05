@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Do You Still Want to Be My Girlfriend?</title>
+<style>
+    body { text-align: center; font-family: Arial, sans-serif; margin: 0; background-color: #ffe6e6; height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; overflow: hidden; }
+    h1 { color: #ff3366; position: fixed; top: 20px; width: 100%; text-align: center; }
+    button { padding: 10px 20px; margin: 5px; font-size: 16px; cursor: pointer; border: none; border-radius: 5px; transition: transform 0.2s; }
+    #yes-btn { background-color: #ff66b2; color: white; }
+    #no-btn { background-color: #ff3366; color: white; }
+    button:hover { transform: scale(1.1); }
+</style>
+</head>
+<body>
+
+<h1>Do you still want to be my girlfriend? 💖</h1>
+<div>
+    <button id="yes-btn">Yes</button>
+    <button id="no-btn">No</button>
+</div>
+
+<script>
+    const yesBtn = document.getElementById('yes-btn');
+    const noBtn = document.getElementById('no-btn');
+    let size = 1;
+
+    noBtn.addEventListener('click', () => {
+        size += 0.5;
+        yesBtn.style.transform = `scale(${size})`;
+    });
+
+    yesBtn.addEventListener('click', () => {
+        const newWindow = window.open('', '_blank');
+        newWindow.document.write(`
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <meta charset="UTF-8">
+                <title>To My Dear Malak 💖</title>
+                <style>
+                    @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+                    body { text-align: center; font-family: 'Dancing Script', cursive; background-color: #ffe6e6; padding: 20px; }
+                    h1 { color: #ff3366; margin-bottom: 20px; }
+                    p { color: #ff3366; font-size: 24px; line-height: 1.5; white-space: pre-wrap; max-width: 800px; margin: 0 auto; }
+                    .photo-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 20px; }
+                    .photo-grid img { max-width: 200px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
+                </style>
+            </head>
+            <body>
+                <h1>To My Dear Malak 💖</h1>
+                <p>To my dear Malak. B7ebk awe ya kotyyy bgd ana shoft menk hagat kteer awe helwa w el ana b3mlo dlwa2te dh a2al haga ya ro7yyy.  
+                Ana bgd b7awl amsk feke zy ma ente yama mskte fya. Ana fakr kol al helw w el we7sh dh al khlana enharda mn gheir embara7 mafesh bokra.  
+                Kol memory helwa 3eshnaha, kol de7ka, kol far7a, kol haga ana w ente 3dea beiha m3 b3d al mkhlyane afdl mwgod m3ake bal rghm mn kol haga.  
+                Ana shayf mosta2be beiky wana shayf menk al 7ob w hfdl mstne w asbor 3leke aashan ente tstahle hagat kteer helwa.  
+                Ente bs msh aarfa 2emt nfsk. Wana asef lw asart m3ake aw kont rekhm aw btkhan2 m3ake kteer.  
+                Dlwa2te ana bt3akb w btmna ay ghlta mn ghltat al konte bt3mleha.  
+                Btmna a3esh ay yom m3ake w zy zman 7ta lw htday2ene al hagat al baseta bta3t zman.  
+                F3ln sanwaya sa3ba w mot3ba w stressing bs we can do it, we can go further me and you.  
+                E7na mlnash gheir b3d w atmna el mrady fe haga ttghyar w nb2a a7sn l b3d. ❤️  
+                </p>
+                <div class="photo-grid">
+                    <img src="photo1.jpeg" alt="Photo 1">
+                    <img src="photo2.jpeg" alt="Photo 2">
+                    <img src="photo3.jpeg" alt="Photo 3">
+                    <img src="photo4.jpeg" alt="Photo 4">
+                </div>
+            </body>
+            </html>
+        `);
+    });
+</script>
+
+</body>
+</html>
