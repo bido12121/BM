@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Do You Still Want to Be My Girlfriend?</title>
+<style>
+    body { text-align: center; font-family: Arial, sans-serif; margin-top: 50px; background-color: #f0f0f0; }
+    button { padding: 10px 20px; margin: 5px; font-size: 16px; cursor: pointer; }
+    #yes-btn { background-color: #4CAF50; color: white; }
+    #no-btn { background-color: #f44336; color: white; }
+</style>
+</head>
+<body>
+
+<h1>Do you still want to be my girlfriend?</h1>
+<button id="yes-btn">Yes</button>
+<button id="no-btn">No</button>
+
+<script>
+    const yesBtn = document.getElementById('yes-btn');
+    const noBtn = document.getElementById('no-btn');
+
+    noBtn.addEventListener('click', () => {
+        yesBtn.style.transform = 'scale(1.5)';  // Makes the Yes button bigger
+    });
+
+    yesBtn.addEventListener('click', () => {
+        alert('I knew it! Love you! ❤️');
+    });
+</script>
+
+</body>
+</html>
